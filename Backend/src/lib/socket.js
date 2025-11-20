@@ -9,7 +9,7 @@ const app =express()
 const server = http.createServer(app)
 
 const io= new Server(server,{
-    cors:{ origin: [process.env.CLIENT_URL],
+    cors:{ origin: "https://chatapp-front-b7la.onrender.com",
       credentials:true
     },
 }
