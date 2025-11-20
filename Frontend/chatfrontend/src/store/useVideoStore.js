@@ -130,7 +130,6 @@ handleUserjoined: (data) => {
     console.log(`${MyEmail} joined the Video chat`)
     set({remoteSocketId:id})
 handleCall()
-handleCall()
 
 
  },
@@ -145,13 +144,19 @@ handleCall()
   const senders = peer.getSenders();
   const tracks = myStream.getTracks();
 
-  tracks.forEach((track, i) => {
-    if (senders[i]) {
-      senders[i].replaceTrack(track);
-    } else {
-      peer.addTrack(track, myStream);
-    }
-  })
+  // tracks.forEach((track, i) => {
+  //   if (senders[i]) {
+  //     senders[i].replaceTrack(track);
+  //   } else {
+  //     peer.addTrack(track, myStream);
+  //   }
+  // })
+
+   tracks.forEach((track) => {
+    const sender = senders.find(s => s.track && s.track.kind === track.kind);
+    if (sender) {
+      sender.replaceTrack(track);
+    }})
 },
 
 
