@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useChatStore } from "../store/useChatStore";
 import UsersLoadingSkeleton from "./UsersLoadingSkeleton";
 import NoChatsFound from "./NoChatsFound.jsx";
-import { useAuthStore } from "../store/useAuthstore";
+import { useAuthStore } from "../store/useAuthStore";
 import { useRef } from "react";
 
 const ChatsList = () => {

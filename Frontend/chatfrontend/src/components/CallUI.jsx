@@ -2,7 +2,7 @@ import { PhoneIcon, XIcon } from 'lucide-react'
 import React from 'react'
 import { useNavigate } from 'react-router'
 import { useVideoStore } from '../store/useVideoStore'
-import { useAuthStore } from '../store/useAuthstore'
+import { useAuthStore } from '../store/useAuthStore'
 import { sound3 } from '../hooks/ringtoneSounds'
 import { useEffect } from 'react'
 

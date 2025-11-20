@@ -4,7 +4,7 @@ import { useChatStore } from '../store/useChatStore'
 
 import { useVideoStore } from "../store/useVideoStore";
 import { useNavigate } from 'react-router';
-import { useAuthStore } from '../store/useAuthstore';
+import { useAuthStore } from '../store/useAuthStore';
 import {nanoid} from 'nanoid'
 
 

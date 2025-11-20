@@ -1,5 +1,5 @@
 import React from 'react'
-import { useAuthStore } from '../store/useAuthstore'
+import { useAuthStore } from '../store/useAuthStore'
 import { useChatStore } from '../store/useChatStore'
 import { XIcon } from 'lucide-react'
 import VideoButton from './VideoButton'

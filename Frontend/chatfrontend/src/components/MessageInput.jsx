@@ -1,4 +1,3 @@
-import { useAuthStore } from '../store/useAuthstore'
 import { useChatStore } from '../store/useChatStore'
 import { useState, useRef } from 'react'
 

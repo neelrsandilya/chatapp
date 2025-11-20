@@ -1,7 +1,7 @@
 import { useChatStore } from "../store/useChatStore"
 import { LogInIcon, LogOut, Volume1Icon, VolumeOff } from "lucide-react"
 import { useState, useRef } from "react"
-import { useAuthStore } from "../store/useAuthstore"
+import { useAuthStore } from "../store/useAuthStore"
 
 
 

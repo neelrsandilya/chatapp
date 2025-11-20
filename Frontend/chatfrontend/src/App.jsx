@@ -4,7 +4,7 @@ import SignupPage from './pages/SignupPage'
 import Room from './components/Room' 
 import { Navigate, Routes } from 'react-router'
 import { Route } from 'react-router'
-import { useAuthStore } from './store/useAuthstore'
+import { useAuthStore } from './store/useAuthStore'
 import PageLoader from './components/PageLoader'
 
 import { useEffect } from 'react';
