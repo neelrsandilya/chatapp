@@ -1,9 +1,7 @@
 import { PhoneMissed, VideoIcon } from 'lucide-react'
 import React, { useEffect } from 'react'
-import { io } from 'socket.io-client'
 import { useVideoStore } from '../store/useVideoStore'
-import ReactPlayer from 'react-player'
-import { useParams } from 'react-router'
+
 import { useRef } from 'react'
 import { usePeerStore } from '../store/usePeerStore'
 import { useState } from 'react'

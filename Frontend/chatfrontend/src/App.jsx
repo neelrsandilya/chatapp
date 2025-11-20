@@ -1,15 +1,12 @@
-import React from 'react'
-import ChatPage from './pages/chatPage'
-import LoginPage from './pages/loginPage'
-import SignupPage from './pages/signupPage'
+import ChatPage from './pages/ChatPage'
+import LoginPage from './pages/LoginPage'
+import SignupPage from './pages/SignupPage'
 import Room from './components/Room' 
 import { Navigate, Routes } from 'react-router'
 import { Route } from 'react-router'
 import { useAuthStore } from './store/useAuthstore'
 import PageLoader from './components/PageLoader'
-import { useState } from 'react';
-import { useVideoStore } from './store/useVideoStore'
-import CallUI from './components/CallUI'
+
 import { useEffect } from 'react';
 
 
