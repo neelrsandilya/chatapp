@@ -1,0 +1,95 @@
+import React from 'react'
+import ChatPage from './pages/chatPage'
+import LoginPage from './pages/loginPage'
+import SignupPage from './pages/signupPage'
+import Room from './components/Room' 
+import { Navigate, Routes } from 'react-router'
+import { Route } from 'react-router'
+import { useAuthStore } from './store/useAuthstore'
+import PageLoader from './components/PageLoader'
+import { useState } from 'react';
+import { useVideoStore } from './store/useVideoStore'
+import CallUI from './components/CallUI'
+import { useEffect } from 'react';
+
+
+
+
+const App = () => {
+
+    // const [isIncoming, setisIncoming] = useState(false)
+    
+    
+    // const {socket,setIncomingRoom,setIncomingFrom}=useVideoStore()
+  
+  
+  
+  
+    // useEffect(() => {
+    
+    
+    
+    //          if (!socket) return;
+    
+    //   if (!socket.connected) socket.connect();
+    //   console.log("listening for Call req")
+    //         socket.off("callReq");
+    
+    //     socket.on("callReq",({from,fromSocket,room}) => { 
+    //           console.log("received call req")
+  
+    //        setIncomingRoom(room)
+    //       setIncomingFrom(fromSocket)
+    //       setisIncoming(true)
+         
+          
+    //      })
+           
+  
+    // }, [socket])
+    
+    
+    
+
+  const {authUser,isCheckingAuth,checkAuth} =useAuthStore()
+  useEffect(() => {
+    checkAuth()
+   
+  }, [checkAuth])
+     if(isCheckingAuth)return <PageLoader/>
+
+  
+
+  return (
+
+    
+
+  
+    <div 
+    className="min-h-screen bg-slate-900 relative flex items-center justify-center p-4 overflow-hidden"
+    >
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]  pointer-events-none" />
+      <div className="absolute top-0 -left-4 size-96 bg-pink-500 opacity-20 blur-[100px]  pointer-events-none" />
+      <div className="absolute bottom-0 -right-4 size-96 bg-cyan-500 opacity-20 blur-[100px]  pointer-events-none" />
+
+
+        {/* {isIncoming && <CallUI/>} */}
+    <Routes>
+
+    
+    <Route path="/" element= {authUser?<ChatPage/>: <Navigate to ="/login"/>} > </Route>
+    <Route path="/login" element= {authUser?<ChatPage/>: <LoginPage/>}> </Route>
+    <Route path="/signup" element= {authUser?<ChatPage/>: <SignupPage/>}> </Route>
+    <Route path="/room/:roomId" element= {<Room/>}> </Route>
+    
+    </Routes>
+      
+ </div>
+
+
+
+
+  )
+}
+
+export default App
